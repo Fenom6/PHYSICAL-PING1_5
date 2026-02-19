@@ -1345,7 +1345,7 @@ function SpecCanvas(props){
 /* ═══════════════════════════════════════════════════════════ */
 /* ═══════════════════════════════════════════════════════════ */
 /*  v1.5: ARTIFICIAL MIDBRAIN (L1) LAYER                      */
-/*  野村プロトコル / 汎用人工中脳設計論 v0.1 実装               */
+/*  汎用人工中脳設計論 v0.1 実装               */
 /* ═══════════════════════════════════════════════════════════ */
 
 /* Mode FSM states (沈黙→NOMINAL→ALERT→CRITICAL→EMERGENCY) */
@@ -1624,7 +1624,7 @@ function usePatentData(history,mediation,phaseLaws){
       deviceId:DEVICE_ID,deviceName:DEVICE_NAME,
       sessions:sessions,currentSession:current,
       summary:{totalSessions:sessions.length,totalSamples:sessions.reduce(function(s,sess){return s+(sess.stats?sess.stats.n:0);},0)},
-      certStatement:'このデータセットはPhysical Ping pTCP v1.5によって自動生成され、CRC32完全性検証済みです。野村プロトコル / Phase-Law Architecture準拠。'
+      certStatement:'このデータセットはPhysical Ping pTCP v1.5によって自動生成され、CRC32完全性検証済みです。Phase-Law Architecture準拠。'
     };
     var blob=new Blob([JSON.stringify(dataset,null,2)],{type:'application/json'});
     var url=URL.createObjectURL(blob);var a=document.createElement('a');
@@ -2743,7 +2743,7 @@ function App(){
     h('div',{style:{textAlign:'center',padding:'12px',fontSize:'8px',color:'#334455',borderTop:'1px solid #0a0f14',marginTop:'12px'}},
       'PHYSICAL PING — pTCP/IP v1.5 APPLICATION',
       h('br'),
-      'L0小脳 Phase-Law  ·  L1中脳 Midbrain  ·  L3大脳 Claude API  |  野村プロトコル 2026')
+      'L0小脳 Phase-Law  ·  L1中脳 Midbrain  ·  L3大脳 Claude API ')
   );
 }
 
